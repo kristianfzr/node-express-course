@@ -1,1 +1,4 @@
-console.log('Hello World!');
+
+sayHi('susan');
+sayHi(john);
+sayHi(peter);
