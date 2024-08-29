@@ -1,17 +1,16 @@
-const http = require("http");
+const {createReadStream} = require('fs');
 
-const server = http.createServer((req, res) => {
-  if (req.url === "/") {
-    res.end("Welcome to our home page");
-  }
-  if (req.url === "/about") {
-    res.end("Welcome to the about page");
-  }
-  res.end(`
-        <h1>Oops!</h1>
-        <p>We cant't seem to find the page you are looking for</p>
-        <a href="/">back home</a>
-        `);
+const stream = createReadStream('./content/big.txt', { highWaterMark: 90000 });
+
+stream.on('data', (result) => {
+    let i = 1;
+    console.log(`${result.utf8Slice(), i++}`);
 });
 
-server.listen(3000);
+// const { createWriteStream } = require('fs');
+
+// const write = createWriteStream('./content/big.txt');
+
+// for (let i = 0; i < 10000; i++) {
+//     write.write('Hello World\n');
+// };
