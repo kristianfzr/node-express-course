@@ -1,15 +1,18 @@
 {
-  "name": "00-my-code",
+  "name": "2-express-tutorial",
   "version": "1.0.0",
-  "main": "1-intro.js",
-  "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
-  },
-  "author": "Kristian Kanchev",
-  "license": "ISC",
   "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
-    "nodemon": "^3.1.4"
+    "nodemon": "^2.0.7"
   }
 }
